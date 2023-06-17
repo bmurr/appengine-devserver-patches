@@ -1,0 +1,11 @@
+--- util.orig.py	2023-06-17 11:12:24
++++ util.new.py	2023-06-17 11:12:52
+@@ -112,7 +112,7 @@
+     environ: An environ dict for the request as defined in PEP-333.
+   """
+   for key, value in headers:
+-    environ['HTTP_%s' % six.ensure_text(key.upper()).replace('-', '_')] = value
++    environ[six.ensure_str('HTTP_%s' % key.upper().replace('-', '_'))] = value
+ 
+ 
+ def is_env_flex(env):
