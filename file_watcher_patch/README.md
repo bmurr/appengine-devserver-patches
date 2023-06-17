@@ -9,6 +9,7 @@ Related articles:
 
 ### To use
 - Apply the patch file_watcher.patch to `APPENGINE_ROOT/google/appengine/tools/devappserver2/file_watcher.py`
+The command will look like `patch "$(gcloud info --format="value(installation.sdk_root)")/platform/google_appengine/google/appengine/tools/devappserver2/file_watcher.py" < file_watcher.patch`.
 - Place watchdog_file_watcher.py in `APPENGINE_ROOT/google/appengine/tools/devappserver2/`
 
 ### Caveats:
