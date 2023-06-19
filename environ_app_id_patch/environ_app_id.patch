@@ -1,0 +1,10 @@
+--- util.orig.py	2023-06-19 13:36:51
++++ util.new.py	2023-06-19 13:36:29
+@@ -151,6 +151,7 @@
+     app_id: The id of the application.
+   """
+   os.environ['GAE_APPLICATION'] = app_id
++  os.environ['APPLICATION_ID'] = app_id
+   # Purge _DATASTORE_PROJECT_ID_ENV from dev_appserver process. Otherwise the
+   # logics for datastore rpc would be tricked to use Cloud Datastore mode.
+   # If necessary, users can still pass this environment variable to local

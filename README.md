@@ -13,4 +13,10 @@ See: https://issuetracker.google.com/issues/219885365
 
 Seems to still be required as of gcloud 426.0.0
 
+## environ_app_id_patch
 
+Requests to `/_ah/gcs...` were not working due to missing `APPLICATION_ID` in os.environ.
+
+See: https://issuetracker.google.com/issues/287752841
+
+Seems to still be required as of gcloud 435.0.1
